@@ -1,0 +1,27 @@
+#logo {
+    height: 80px;
+}
+
+#logo img {
+    height: 100%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #74F2CE;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #74F2CE;
+}
+
+#basic-nav-dropdown.dropdown-toggle.nav-link {
+    color: #74F2CE;
+}
+
+.dropdown-menu {
+    background-color: #7a749d
+}
+
+.navbar-nav a {
+    color: #74F2CE;
+}
