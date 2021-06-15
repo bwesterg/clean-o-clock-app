@@ -25,3 +25,12 @@
 .navbar-nav a {
     color: #74F2CE;
 }
+
+/* .dropdown-menu {
+    background-color: #74F2CE;
+    font-size: 1.2rem;
+} */
+
+.navbar-nav a:hover {
+    color: #7a749d;
+}

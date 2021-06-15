@@ -18,15 +18,13 @@ const HeaderNav = () => {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
-                <Nav.Link href="/home">Home</Nav.Link>
-          
-                <NavDropdown title="Areas" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="/kitchen">Kitchen</NavDropdown.Item>
-                    <NavDropdown.Item href="/guestroom">Guest Room</NavDropdown.Item>
-                    <NavDropdown.Item href="/rooftopdeck">Rooftop Deck</NavDropdown.Item>
-                    
-                    
+                    <NavDropdown title="Areas" id="basic-nav-dropdown">
+                        <NavDropdown.Item href="/areas/kitchen">Kitchen</NavDropdown.Item>
+                        <NavDropdown.Item href="/areas/guestroom">Guest Room</NavDropdown.Item>
+                        <NavDropdown.Item href="/areas/rooftopdeck">Rooftop Deck</NavDropdown.Item>
                 </NavDropdown>
+                <Nav.Link href="/checklists">Checklists</Nav.Link>
+                <Nav.Link href="/stocks">Stocks</Nav.Link>
                 </Nav>
                 
             </Navbar.Collapse>
