@@ -2,12 +2,12 @@ import './Header.css';
 
 import HeaderNav from '../HeaderNav/HeaderNav';
 
-const Header = () => {
+const Header = ({ areas }) => {
 
     return (
         <header>
             
-            <HeaderNav />
+            <HeaderNav areas={areas}/>
         </header>
     )
 }
