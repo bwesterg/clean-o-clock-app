@@ -4,7 +4,26 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import './HeaderNav.css';
 
-const HeaderNav = () => {
+const HeaderNav = ({ areas }) => {
+
+    const createLinkText = areaName => {
+        const linkName = areaName.toLowerCase().split(' ').join('-');
+        return `/areas/${linkName}`;
+    }
+
+    const createNavDropdownItem = area => {
+        const href = createLinkText(area.name);
+        return (
+            <NavDropdown.Item key= { area.id } href={ href } >
+                { area.name }
+            </NavDropdown.Item>
+        );
+    }
+
+    const displayAreaLinks = () => {
+        return areas.map(createNavDropdownItem);
+    }
+
     return (
         <Navbar bg="primary" variant="dark" expand="md">
             <Navbar.Brand href="/">
@@ -19,12 +38,10 @@ const HeaderNav = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <NavDropdown title="Areas" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/areas/kitchen">Kitchen</NavDropdown.Item>
-                        <NavDropdown.Item href="/areas/guestroom">Guest Room</NavDropdown.Item>
-                        <NavDropdown.Item href="/areas/rooftopdeck">Rooftop Deck</NavDropdown.Item>
+                        { displayAreaLinks() }
                 </NavDropdown>
                 <Nav.Link href="/checklists">Checklists</Nav.Link>
-                <Nav.Link href="/stocks">Stocks</Nav.Link>
+                <Nav.Link href="/supplies">Supplies</Nav.Link>
                 </Nav>
                 
             </Navbar.Collapse>
